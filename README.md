@@ -1,23 +1,49 @@
-## Test Solution for Junior Software Developer  
+# Usage
 
-### I used Python version 3.13.1  
+For running this project I recomment using a virtual env. In your env:
 
-#### Libraries Used  
----  
-**NumPy** – Generation of the 200x200 matrix with random values.  
-**Itertools** – Generate multiple tuple combinations.  
-**Operator** – To sum tuples with other tuples.  
+```
+pip install requirements.txt
+```
 
-I also included a *requirements.txt* file with the NumPy version, while the other libraries are built into Python by default.  
+To generate the grid and graph, run the main file:
 
-## How to Run the Program  
-By default, **I set the matrix size to 10x10** (Graphviz starts to slow down a lot on my machine for values above 50). However, if you need to modify it for testing, **line 176**, after *size*, is where you can change it.  
+```
+python3 main.py <int>width <int>height
+```
 
-The **main file is `main.py`**, just run it, and everything should work as expected.  
+The grid will be generated in file named "grid.png" and the graph on the "grid_graph.png".
 
-**At the end of execution, a `result.dot` file will be generated with the Graphviz code.**  
 
-> I also included two additional files: **`result.dot`**, which contains the Graphviz DOT code for a graph I previously generated in a 10x10 matrix, and **`image.png`**, which is the graphical representation of this graph in PNG format.  
+I don't recommend running with a grid wich is bigger than 80x80, because the performance and memory usage is not the best on my implementation.
 
-To convert the Graphviz code into a PNG file, I used this command (Linux):  
-> `dot -Tpng result.dot -o image.png`
+# Grid graph generation
+
+I will explain here the logic behing what I tried to achieve in the code, as the implementation might be a bit off.
+
+## Nodes
+
+First off, we define the nodes that represent the buildings and the warehouses in the grid. This step is straightforward, since every building has an ID and we have a list of warehouse IDs. We just look for every position in the grid that has a building ID and add its bounding box to the list of building nodes.
+
+Then, it is necessary to define our nodes that represent some features of the roads. In the generation of the grid I made some decisions that make the road features detection a little bit easier:
+
+1. There are no roads adjacent to the edges of the grid.
+2. The roads always go from one edge to the opposite edge (no changes in width).
+
+So the only feature we need to detect are intersections and end of roads. For this we define a new matrix, were roads are 0 and the rest of the cells are 1. We iterate over the values that are 0 and check for the orthogonal sum, diagonal sum and if any of the neighbors being considere for the sum are off the grid:
+
+![road_features](.imgs/road_features.png)
+
+If we match the cases shown in the image, we can detect the corners of the roads intersections (red) and ends (blue). With the corners we can then proceed to match and form bounding boxes for these features. So each intersection can have up to 4 corners and each end can have up to 2 corners.
+
+## Edges
+
+So, after this we have all the nodes that represent our grid features. Now we need to create the edges between the nodes. My idea is, as the roads are always going from one edge to the opposite edge, we can pair the oposite ends and after it iterate over all the cells between them to check if there is buildings around or it passes over an intersection:
+
+![adding_edges](.imgs/add_edges.png)
+
+We do this for every pair of opposite ends and at the end we should have a graph with all the conections, something like this:
+
+![grid](.imgs/grid_readme.png)
+
+![grid_graph](.imgs/grid_graph_readme.png)

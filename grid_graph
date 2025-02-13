@@ -1,0 +1,104 @@
+digraph {
+	"(10, 12, 12, 16)" [label="building(1)
+(10, 12, 12, 16)" fillcolor=gold shape=house style=filled]
+	"(18, 4, 19, 6)" [label="warehouse(2)
+(18, 4, 19, 6)" fillcolor=firebrick1 shape=invhouse style=filled]
+	"(4, 15, 5, 16)" [label="warehouse(3)
+(4, 15, 5, 16)" fillcolor=firebrick1 shape=invhouse style=filled]
+	"(5, 0, 7, 1)" [label="building(4)
+(5, 0, 7, 1)" fillcolor=gold shape=house style=filled]
+	"(16, 12, 17, 13)" [label="building(5)
+(16, 12, 17, 13)" fillcolor=gold shape=house style=filled]
+	"(4, 11, 6, 13)" [label="building(6)
+(4, 11, 6, 13)" fillcolor=gold shape=house style=filled]
+	"(4, 7, 7, 8)" [label="building(7)
+(4, 7, 7, 8)" fillcolor=gold shape=house style=filled]
+	"(16, 14, 19, 16)" [label="building(8)
+(16, 14, 19, 16)" fillcolor=gold shape=house style=filled]
+	"(11, 18, 13, 19)" [label="building(9)
+(11, 18, 13, 19)" fillcolor=gold shape=house style=filled]
+	"(17, 18, 19, 19)" [label="building(10)
+(17, 18, 19, 19)" fillcolor=gold shape=house style=filled]
+	"(10, 6, 13, 7)" [label="building(11)
+(10, 6, 13, 7)" fillcolor=gold shape=house style=filled]
+	"(0, 12, 1, 15)" [label="building(12)
+(0, 12, 1, 15)" fillcolor=gold shape=house style=filled]
+	"(0, 5, 1, 9)" [label="building(13)
+(0, 5, 1, 9)" fillcolor=gold shape=house style=filled]
+	"(6, 18, 7, 19)" [label="building(14)
+(6, 18, 7, 19)" fillcolor=gold shape=house style=filled]
+	"(6, 4, 7, 6)" [label="building(15)
+(6, 4, 7, 6)" fillcolor=gold shape=house style=filled]
+	"(11, 8, 13, 9)" [label="building(16)
+(11, 8, 13, 9)" fillcolor=gold shape=house style=filled]
+	"(16, 0, 17, 1)" [label="building(17)
+(16, 0, 17, 1)" fillcolor=gold shape=house style=filled]
+	"(16, 8, 18, 9)" [label="building(18)
+(16, 8, 18, 9)" fillcolor=gold shape=house style=filled]
+	"(8, 2, 9, 3)" [label="intersection
+(8, 2, 9, 3)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(14, 10, 15, 10)" [label="intersection
+(14, 10, 15, 10)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(2, 2, 3, 3)" [label="intersection
+(2, 2, 3, 3)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(14, 17, 15, 17)" [label="intersection
+(14, 17, 15, 17)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(8, 10, 9, 10)" [label="intersection
+(8, 10, 9, 10)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(8, 17, 9, 17)" [label="intersection
+(8, 17, 9, 17)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(2, 17, 3, 17)" [label="intersection
+(2, 17, 3, 17)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(14, 2, 15, 3)" [label="intersection
+(14, 2, 15, 3)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(2, 10, 3, 10)" [label="intersection
+(2, 10, 3, 10)" fillcolor=dodgerblue shape=octagon style=filled]
+	"(0, 10, 0, 10)" [label="road_end
+(0, 10, 0, 10)" fillcolor=green3 shape=square style=filled]
+	"(14, 19, 15, 19)" [label="road_end
+(14, 19, 15, 19)" fillcolor=green3 shape=square style=filled]
+	"(19, 2, 19, 3)" [label="road_end
+(19, 2, 19, 3)" fillcolor=green3 shape=square style=filled]
+	"(8, 0, 9, 0)" [label="road_end
+(8, 0, 9, 0)" fillcolor=green3 shape=square style=filled]
+	"(0, 2, 0, 3)" [label="road_end
+(0, 2, 0, 3)" fillcolor=green3 shape=square style=filled]
+	"(8, 19, 9, 19)" [label="road_end
+(8, 19, 9, 19)" fillcolor=green3 shape=square style=filled]
+	"(2, 0, 3, 0)" [label="road_end
+(2, 0, 3, 0)" fillcolor=green3 shape=square style=filled]
+	"(19, 10, 19, 10)" [label="road_end
+(19, 10, 19, 10)" fillcolor=green3 shape=square style=filled]
+	"(14, 0, 15, 0)" [label="road_end
+(14, 0, 15, 0)" fillcolor=green3 shape=square style=filled]
+	"(2, 19, 3, 19)" [label="road_end
+(2, 19, 3, 19)" fillcolor=green3 shape=square style=filled]
+	"(19, 17, 19, 17)" [label="road_end
+(19, 17, 19, 17)" fillcolor=green3 shape=square style=filled]
+	"(0, 17, 0, 17)" [label="road_end
+(0, 17, 0, 17)" fillcolor=green3 shape=square style=filled]
+	"(10, 12, 12, 16)" -> "(8, 17, 9, 17)" [label=1 arrowhead=none penwidth=1]
+	"(10, 12, 12, 16)" -> "(11, 18, 13, 19)" [label=1 arrowhead=none penwidth=1]
+	"(18, 4, 19, 6)" -> "(19, 10, 19, 10)" [label=1 arrowhead=none penwidth=1]
+	"(18, 4, 19, 6)" -> "(16, 8, 18, 9)" [label=1 arrowhead=none penwidth=1]
+	"(4, 15, 5, 16)" -> "(2, 17, 3, 17)" [label=1 arrowhead=none penwidth=1]
+	"(4, 15, 5, 16)" -> "(6, 18, 7, 19)" [label=1 arrowhead=none penwidth=1]
+	"(5, 0, 7, 1)" -> "(2, 0, 3, 0)" [label=1 arrowhead=none penwidth=1]
+	"(5, 0, 7, 1)" -> "(16, 0, 17, 1)" [label=1 arrowhead=none penwidth=1]
+	"(16, 14, 19, 16)" -> "(16, 8, 18, 9)" [label=1 arrowhead=none penwidth=1]
+	"(16, 14, 19, 16)" -> "(17, 18, 19, 19)" [label=1 arrowhead=none penwidth=1]
+	"(16, 14, 19, 16)" -> "(14, 17, 15, 17)" [label=1 arrowhead=none penwidth=1]
+	"(11, 18, 13, 19)" -> "(6, 18, 7, 19)" [label=1 arrowhead=none penwidth=1]
+	"(11, 18, 13, 19)" -> "(17, 18, 19, 19)" [label=1 arrowhead=none penwidth=1]
+	"(11, 18, 13, 19)" -> "(14, 17, 15, 17)" [label=1 arrowhead=none penwidth=1]
+	"(17, 18, 19, 19)" -> "(14, 19, 15, 19)" [label=1 arrowhead=none penwidth=1]
+	"(17, 18, 19, 19)" -> "(19, 2, 19, 3)" [label=1 arrowhead=none penwidth=1]
+	"(17, 18, 19, 19)" -> "(19, 17, 19, 17)" [label=1 arrowhead=none penwidth=1]
+	"(0, 12, 1, 15)" -> "(0, 5, 1, 9)" [label=1 arrowhead=none penwidth=1]
+	"(0, 12, 1, 15)" -> "(0, 10, 0, 10)" [label=1 arrowhead=none penwidth=1]
+	"(0, 5, 1, 9)" -> "(0, 2, 0, 3)" [label=1 arrowhead=none penwidth=1]
+	"(6, 18, 7, 19)" -> "(8, 19, 9, 19)" [label=1 arrowhead=none penwidth=1]
+	"(6, 18, 7, 19)" -> "(8, 17, 9, 17)" [label=1 arrowhead=none penwidth=1]
+	"(16, 0, 17, 1)" -> "(8, 0, 9, 0)" [label=1 arrowhead=none penwidth=1]
+	"(2, 17, 3, 17)" -> "(0, 17, 0, 17)" [label=1 arrowhead=none penwidth=1]
+}
