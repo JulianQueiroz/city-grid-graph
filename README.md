@@ -32,7 +32,8 @@ Then, it is necessary to define our nodes that represent some features of the ro
 
 So the only feature we need to detect are intersections and end of roads. For this we define a new matrix, were roads are 0 and the rest of the cells are 1. We iterate over the values that are 0 and check for the orthogonal sum, diagonal sum and if any of the neighbors being considere for the sum are off the grid:
 
-![road_features](.imgs/road_features.png)
+![image](https://github.com/user-attachments/assets/f52a0d8c-77fd-4106-8e3d-e85f1bfc2c43)
+
 
 If we match the cases shown in the image, we can detect the corners of the roads intersections (red) and ends (blue). With the corners we can then proceed to match and form bounding boxes for these features. So each intersection can have up to 4 corners and each end can have up to 2 corners.
 
@@ -40,10 +41,12 @@ If we match the cases shown in the image, we can detect the corners of the roads
 
 So, after this we have all the nodes that represent our grid features. Now we need to create the edges between the nodes. My idea is, as the roads are always going from one edge to the opposite edge, we can pair the oposite ends and after it iterate over all the cells between them to check if there is buildings around or it passes over an intersection:
 
-![adding_edges](.imgs/add_edges.png)
+![image](https://github.com/user-attachments/assets/06d6397a-a657-4ba7-a01f-0d888a0feca9)
+
 
 We do this for every pair of opposite ends and at the end we should have a graph with all the conections, something like this:
 
-![grid](.imgs/grid_readme.png)
+![image](https://github.com/user-attachments/assets/fdf224f1-94a2-43bc-97ff-74607ea0d49f)
 
-![grid_graph](.imgs/grid_graph_readme.png)
+
+![image](https://github.com/user-attachments/assets/127d96e3-c7c8-4815-926c-4dd2d70f9803)
