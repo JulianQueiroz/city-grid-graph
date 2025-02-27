@@ -1,3 +1,6 @@
+# About 
+Python application designed to process a large 2D grid representing buildings, roads, and open spaces. The goal is to transform this structured grid into a graph where nodes represent buildings, road intersections, road terminations, and changes in road width, while edges reflect road connections with weights based on road width.
+
 # Usage
 
 For running this project I recomment using a virtual env. In your env:
